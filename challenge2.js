@@ -1,28 +1,20 @@
-let speedDetector = prompt("Enter the speed of car ")
-speedDetector === '70km/s'
-? 'Ok'
-: speedDetector === '75km/s'
-? '1 demerit point'
-:speedDetector === '80km/s'
-? '2 demerit points'
-:speedDetector === '85km/s'
-? '3 demerit points'
-:speedDetector === '90km/s'
-? '4 demerit points'
-:speedDetector === '95km/s'
-? '5 demerit points'
-:speedDetector === '100km/s'
-? '6 demerit points'
-:speedDetector === '105km/s'
-? '7 demerit points'
-:speedDetector === '110km/s'
-? '8 demerit points'
-:speedDetector === '115km/s'
-? '9 demerit points'
-:speedDetector === '120km/s'
-? '10 demerit points'
-:speedDetector === '125km/s'
-? '11 demerit points'
-:speedDetector === '130km/s'
-? '12 demerit points'
-: 'License suspended'
+
+function speedDetector(speed) {
+    // Check speed limit
+    if (speed <= 70) {
+        return ("Ok");
+    }  else {
+    // Calculate demerit points
+    points=Math.floor((speed - 70) / 5)
+    // Suspend license if points exceed 12
+    if (points > 12) {
+        return ("License suspended");
+    } 
+    // Otherwise print total number of demerit points
+    else {
+        return ("Points:", points);
+        }
+    }
+    }
+    speedDetector()
+    console.log(speedDetector(120))

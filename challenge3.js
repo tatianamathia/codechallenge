@@ -78,7 +78,7 @@ function calculateNetSalary(grossSalary) {
  calculateNetSalary()
 
 
-
+// example usage
 
 const grossSalary = 2000000
  const netSalary = calculateNetSalary(grossSalary);
